@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> create a first from</title>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+
+            const data = Object.fromEntries(formData);
+            console.log(data);  
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <form method="post" onsubmit="handleSubmit(event)">
+            <h2>Ragister from</h2>
+            <label for="username">Username</label>
+            <input type="text" id="usernamme" placeholder="name" name="username" required> <br>
+            <br>
+            <label for="password">Password</label>
+            <input type="text" id="password" placeholder="password" name="password" required> <br>
+
+            <br>
+            <label for="phno">Pn Number</label>
+            <input type="text" id="phno" placeholder="mobileno" name="ph number" required> <br>
+
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email">
+
+            <!-- <input type="submit" value="login"> -->
+            <br>
+            <button type="submit">Login</button>
+            <br>
+            <div>
+                <h2>choose gender</h2>
+                <label for="male">male</label>
+                <input type="radio" id="male" name="gender">
+                <label for="female">female</label>
+                <input type="radio" id="male" name="gender">
+                <label for="other">other</label>
+                <input type="radio" id="male" name="gender">
+            </div>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
